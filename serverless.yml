@@ -7,6 +7,11 @@ provider:
     # The stage of the application, e.g. dev, production, staging… ('dev' is the default)
     stage: dev
     runtime: provided
+    environment:
+        DB_HOST: ${ssm:/coleus/DB_HOST}
+        DB_DATABASE: ${ssm:/coleus/DB_DATABASE}
+        DB_USERNAME: ${ssm:/coleus/DB_USERNAME}
+        DB_PASSWORD: ${ssm:/coleus/DB_PASSWORD}
 
 package:
     # Directories to exclude from deployment
@@ -25,8 +30,8 @@ functions:
         layers:
             - ${bref:layer.php-74-fpm}
         events:
-            -   http: 'ANY /'
-            -   http: 'ANY /{proxy+}'
+            - http: "ANY /"
+            - http: "ANY /{proxy+}"
     # This function lets us run artisan commands in Lambda
     artisan:
         handler: artisan

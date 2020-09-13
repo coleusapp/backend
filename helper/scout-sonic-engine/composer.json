@@ -25,7 +25,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Coleus\\Sonic\\Providers\\SonicServiceProvider"
+                "Coleus\\Sonic\\SonicServiceProvider"
             ]
         }
     },

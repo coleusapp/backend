@@ -1,6 +1,6 @@
 <?php
 
-namespace Coleus\Sonic\Providers;
+namespace Coleus\Sonic;
 
 use Coleus\Sonic\SonicEngine;
 use SonicSearch\ChannelFactory;

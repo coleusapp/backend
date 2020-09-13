@@ -12,6 +12,9 @@ provider:
         DB_DATABASE: ${ssm:/coleus/DB_DATABASE}
         DB_USERNAME: ${ssm:/coleus/DB_USERNAME}
         DB_PASSWORD: ${ssm:/coleus/DB_PASSWORD}
+        APP_ENV: production
+        APP_DEBUG: true
+        APP_KEY: "base64:GNfPMO7D5CmTP3ZTwTX8iznKJEHb9rHyFjhlxcern9c="
 
 package:
     # Directories to exclude from deployment

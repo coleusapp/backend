@@ -8,13 +8,19 @@ provider:
     stage: dev
     runtime: provided
     environment:
-        DB_HOST: ${ssm:/coleus/DB_HOST}
-        DB_DATABASE: ${ssm:/coleus/DB_DATABASE}
-        DB_USERNAME: ${ssm:/coleus/DB_USERNAME}
-        DB_PASSWORD: ${ssm:/coleus/DB_PASSWORD}
         APP_ENV: production
         APP_DEBUG: true
         APP_KEY: "base64:GNfPMO7D5CmTP3ZTwTX8iznKJEHb9rHyFjhlxcern9c="
+    vpc:
+        securityGroupIds:
+            - sg-f012a9a8
+        subnetIds:
+            - subnet-37101638
+            - subnet-d9392593
+            - subnet-eb672eb7
+            - subnet-67682349
+            - subnet-5a74e464
+            - subnet-f5276b92
 
 package:
     # Directories to exclude from deployment

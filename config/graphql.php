@@ -111,7 +111,7 @@ return [
             'mutation' => [
                 // 'example_mutation'  => ExampleMutation::class,
             ],
-            'middleware' => [],
+            'middleware' => ['pepper'],
             'method' => ['get', 'post'],
         ],
     ],

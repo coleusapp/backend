@@ -3,6 +3,7 @@ service: coleus
 provider:
     name: aws
     region: us-east-1
+    stage: production
     runtime: provided
     environment:
         APP_ENV: production

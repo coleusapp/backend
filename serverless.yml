@@ -73,7 +73,7 @@ resources:
                   ],
                 ]
               # This is the stage
-              OriginPath: "/${opt:stage, 'dev'}"
+              OriginPath: "/${opt:stage, 'production'}"
               CustomOriginConfig:
                 OriginProtocolPolicy: "https-only" # API Gateway only supports HTTPS
           # The default behavior is to send everything to AWS Lambda

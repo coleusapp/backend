@@ -10,6 +10,7 @@ use App\Contracts\Image;
 use Illuminate\Support\Str;
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\DB;
 
 class ImportData extends Command
 {
@@ -181,6 +182,7 @@ class ImportData extends Command
 
         // Reset
         $this->info('Reset data');
+        DB::statement('SET FOREIGN_KEY_CHECKS=0;');
         if (!is_null($this->argument('username'))) {
             $user = User::whereUsername($this->argument('username'))->first();
             if (!is_null($user)) {
@@ -202,6 +204,7 @@ class ImportData extends Command
             Page::truncate();
             Block::truncate();
         }
+        DB::statement('SET FOREIGN_KEY_CHECKS=1;');
 
         $users = json_decode(Storage::disk('dataset')->get('ganjoor/users/all.json'));
         foreach ($users as $user) {

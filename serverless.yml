@@ -20,9 +20,8 @@ provider:
     IMGPROXY_PUBLIC_URL: ${ssm:/coleus/IMGPROXY_PUBLIC_URL}
     FILESYSTEM_DRIVER: s3
     FILESYSTEM_CLOUD: s3
-    AWS_ACCESS_KEY_ID: ${ssm:/coleus/AWS_KEY}
-    AWS_SECRET_ACCESS_KEY: ${ssm:/coleus/AWS_SECRET}
-    AWS_DEFAULT_REGION: us-east-1
+    AWS_KEY: ${ssm:/coleus/AWS_KEY}
+    AWS_SECRET: ${ssm:/coleus/AWS_SECRET}
     AWS_BUCKET: coleus-public
     DATASET_BUCKET: coleus-data
   vpc:

@@ -22,7 +22,6 @@ provider:
     FILESYSTEM_CLOUD: s3
     AWS_KEY: ${ssm:/coleus/AWS_KEY}
     AWS_SECRET: ${ssm:/coleus/AWS_SECRET}
-    AWS_REGION: us-east-1
     AWS_BUCKET: coleus-public
     DATASET_BUCKET: coleus-data
   vpc:

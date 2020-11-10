@@ -15,6 +15,9 @@ provider:
     DB_DATABASE: ${ssm:/coleus/DB_DATABASE}
     DB_USERNAME: ${ssm:/coleus/DB_USERNAME}
     DB_PASSWORD: ${ssm:/coleus/DB_PASSWORD}
+    IMGPROXY_KEY: ${ssm:/coleus/IMGPROXY_KEY}
+    IMGPROXY_SALT: ${ssm:/coleus/IMGPROXY_SALT}
+    IMGPROXY_PUBLIC_URL: ${ssm:/coleus/IMGPROXY_PUBLIC_URL}
   vpc:
     securityGroupIds:
       - sg-f012a9a8

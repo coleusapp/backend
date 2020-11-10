@@ -18,6 +18,13 @@ provider:
     IMGPROXY_KEY: ${ssm:/coleus/IMGPROXY_KEY}
     IMGPROXY_SALT: ${ssm:/coleus/IMGPROXY_SALT}
     IMGPROXY_PUBLIC_URL: ${ssm:/coleus/IMGPROXY_PUBLIC_URL}
+    FILESYSTEM_DRIVER: s3
+    FILESYSTEM_CLOUD: s3
+    AWS_KEY:
+    AWS_SECRET:
+    AWS_REGION: us-east-1
+    AWS_BUCKET: coleus-public
+    DATASET_BUCKET: coleus-data
   vpc:
     securityGroupIds:
       - sg-f012a9a8

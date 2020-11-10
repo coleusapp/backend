@@ -15,9 +15,9 @@ class CreatePagesTable extends Migration
     {
         Schema::create('pages', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->unsignedInteger('book_id');
+            $table->unsignedBigInteger('book_id');
             $table->foreign('book_id')->references('id')->on('books');
-            $table->unsignedInteger('order')->default(0);
+            $table->unsignedBigInteger('order')->default(0);
             $table->text('title')->nullable();
             $table->string('status')->default('draft');
             $table->timestamps();

@@ -19,8 +19,8 @@
     ],
     "require": {
         "php": "^7.2.5",
-        "bref/bref": "^0.5.30",
-        "bref/laravel-bridge": "^0.2.1",
+        "bref/bref": "^0.5.32",
+        "bref/laravel-bridge": "^0.2.2",
         "chaseconey/laravel-datadog-helper": "^1.2",
         "coleus/scout-sonic-engine": "@dev",
         "fideloper/proxy": "^4.0",

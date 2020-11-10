@@ -7,8 +7,15 @@ provider:
   runtime: provided
   environment:
     APP_ENV: production
-    APP_DEBUG: true
-    APP_KEY: "base64:GNfPMO7D5CmTP3ZTwTX8iznKJEHb9rHyFjhlxcern9c="
+    APP_DEBUG: false
+    environment:
+      APP_KEY: ${ssm:/coleus/APP_KEY}
+      DB_CONNECTION: ${ssm:/coleus/DB_CONNECTION}
+      DB_HOST: ${ssm:/coleus/DB_HOST}
+      DB_PORT: ${ssm:/coleus/DB_PORT}
+      DB_DATABASE: ${ssm:/coleus/DB_DATABASE}
+      DB_USERNAME: ${ssm:/coleus/DB_USERNAME}
+      DB_PASSWORD: ${ssm:/coleus/DB_PASSWORD}
   vpc:
     securityGroupIds:
       - sg-f012a9a8
